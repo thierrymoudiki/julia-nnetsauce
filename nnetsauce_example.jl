@@ -10,8 +10,10 @@ using Conda
 
 Conda.add("pip")  # Ensure pip is installed
 Conda.pip_interop(true)  # Enable pip interop
+Conda.pip("install", "scikit-learn")  # Install scikit-learn
+Conda.pip("install", "jax")  # /!\ Only on Linux or macOS: Install jax
+Conda.pip("install", "jaxlib")  # /!\ Only on Linux or macOS: Install jaxlib
 Conda.pip("install", "nnetsauce")  # Install nnetsauce
-Conda.pip("install", "scikit-learn")  # Install nnetsauce
 Conda.add("numpy")
 
 np = pyimport("numpy")
